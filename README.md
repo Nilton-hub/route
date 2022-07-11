@@ -74,7 +74,7 @@ $route->run();
 
 To catch errors, just call the ```getError()``` method after ```run()```, which will return an object with the error information. As in the case of a non-existent route.
 ```php
-if ($route->getError()) {
+if ($error = $route->getError()) {
     // Handle errors here.
     $code = $error->getHttpErrorCode();
     $message = $error->getHttpErrorMessage();
