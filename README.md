@@ -81,3 +81,5 @@ if ($error = $route->getError()) {
     echo "Error {$code}, {$message}!";
 }
 ```
+Consulte a pasta exemplos
+-------------------------
