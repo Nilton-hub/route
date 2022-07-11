@@ -1,0 +1,26 @@
+{
+    "name": "niltonduarte/route",
+    "description": "A lightweight, simple and easy request router for your application.",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": ["router", "routing", "psr-7"],
+    "authors": [
+        {
+            "name": "José Nilton",
+            "email": "tvirapegubeco@gmail.com",
+            "homepage": "https://www.facebook.com/nilton.duartte100",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Route\\": "src/"
+        },
+        "files": [
+            "src/boot/helpers.php"
+        ]
+    },
+    "require": {
+        "php": ">=7.4"
+    }
+}
