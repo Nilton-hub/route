@@ -1,7 +1,17 @@
 Application Router for PHP
 ===========================
 
-For more details, see the examples folder inside the library. It has no dependencies.
+For more details, see the examples folder inside the library. It has no dependencies. Use this with any server, including PHP's built-in server. Inside the folder where you downloaded the component open the terminal and run the command:
+
+```ch
+php -S localhost:80 -t .
+```
+or
+```ch
+php -S localhost:80
+```
+
+If you have a problem, just change the 80 to another port number. For more details on PHP's built-in web server see https://www.php.net/manual/en/features.commandline.webserver.php
 
 Its use is ridiculously easy!
 -----------------------------
@@ -21,7 +31,7 @@ $route = new Route\Route\Route();
 
 The Route component supports the five most common HTTP methods in applications, GET, POST, PUT, PATCH and DELETE.
 
-To define a route, call one of the ```Route\Route\RouteInterface``` interface methods passing a route and a handler:
+To define a route, call one of the interface methods ```Route\Route\RouteInterface``` passing a route and a handle as a parameter:
 
 ```php
 $route->get('/route-name', 'handler');
