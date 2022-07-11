@@ -31,7 +31,7 @@ $route = new Route\Route\Route();
 
 The Route component supports the five most common HTTP methods in applications, GET, POST, PUT, PATCH and DELETE.
 
-To define a route, call one of the interface methods ```Route\Route\RouteInterface``` passing a route and a handle as a parameter:
+To define a route, call one of the methods of the ```Route\Route\RouteInterface``` interface, passing a route and a handle as a parameter:
 
 ```php
 $route->get('/route-name', 'handler');
