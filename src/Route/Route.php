@@ -18,12 +18,15 @@ class Route extends Bootstrap
      * @var string $uri
      * @return bool
      */
-    public function findUri($route, $uri): bool
+    private function findUri($route, $uri): bool
     {
         $uriWithoutParams = extract_params($route);
         $uri = ($uri === "" ? "/" : $uri);
         $compareUris = strncmp($uriWithoutParams, $uri, strlen($uriWithoutParams));
-        if ($compareUris === 0 && count(explode('/', $route)) === count(explode('/', $uri))) {
+        $arrRoute = array_filter(explode('/', $route), fn($e) => $e !== '');
+        $arrUri = array_filter(explode('/', $uri), fn($e) => $e !== '');
+        if ($compareUris === 0 && count($arrRoute) === count($arrUri)) {
+            var_dump($arrRoute, $arrUri);
             return true;
         }
         return false;
@@ -61,6 +64,7 @@ class Route extends Bootstrap
                     return;
                 }
                 (new $class())->$method($paramsArray);
+                return;
             }
         }
     }
