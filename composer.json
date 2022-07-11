@@ -3,7 +3,7 @@
     "description": "A lightweight, simple and easy request router for your application.",
     "license": "BSD-3-Clause",
     "type": "library",
-    "keywords": ["router", "routing", "psr-7"],
+    "keywords": ["router", "routing", "psr-7", "MVC", "controller"],
     "authors": [
         {
             "name": "José Nilton",
