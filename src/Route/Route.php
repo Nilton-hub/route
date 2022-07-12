@@ -26,7 +26,6 @@ class Route extends Bootstrap
         $arrRoute = array_filter(explode('/', $route), fn($e) => $e !== '');
         $arrUri = array_filter(explode('/', $uri), fn($e) => $e !== '');
         if ($compareUris === 0 && count($arrRoute) === count($arrUri)) {
-            var_dump($arrRoute, $arrUri);
             return true;
         }
         return false;
