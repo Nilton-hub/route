@@ -3,6 +3,7 @@ use Route\Route\Route;
 require __DIR__ . "/vendor/autoload.php";
 
 $route = new Route();
+
 # Always use the @ character to separate the class name from the method name. You must enter the fully qualified name of the class.
 $route->get('/', 'Src\Controllers\App@home'); // The root route is defined only with a slash.
 $route->get('/about-us', 'Src\Controllers\App@about'); // Methods that execute routes receive a route and a route handler.
